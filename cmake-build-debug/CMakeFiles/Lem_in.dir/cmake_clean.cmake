@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Lem_in.dir/libft/get_next_line.c.o"
   "CMakeFiles/Lem_in.dir/libft/ft_atoi.c.o"
   "CMakeFiles/Lem_in.dir/libft/ft_bzero.c.o"
   "CMakeFiles/Lem_in.dir/libft/ft_isalnum.c.o"
@@ -63,9 +62,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/Lem_in.dir/libft/ft_strtrim.c.o"
   "CMakeFiles/Lem_in.dir/libft/ft_tolower.c.o"
   "CMakeFiles/Lem_in.dir/libft/ft_toupper.c.o"
+  "CMakeFiles/Lem_in.dir/libft/get_next_line.c.o"
   "CMakeFiles/Lem_in.dir/main.c.o"
-  "Lem_in.pdb"
   "Lem_in"
+  "Lem_in.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
