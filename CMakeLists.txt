@@ -1,14 +1,11 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.16)
 project(Lem_in C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(gnl)
 include_directories(libft)
 
 add_executable(Lem_in
-        libft/get_next_line.c
-        libft/get_next_line.h
         libft/ft_atoi.c
         libft/ft_bzero.c
         libft/ft_isalnum.c
@@ -72,5 +69,7 @@ add_executable(Lem_in
         libft/ft_strtrim.c
         libft/ft_tolower.c
         libft/ft_toupper.c
+        libft/get_next_line.c
+        libft/get_next_line.h
         libft/libft.h
         main.c)

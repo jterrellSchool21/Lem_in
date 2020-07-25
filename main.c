@@ -2,6 +2,8 @@
 #include <fcntl.h>
 #include "libft.h"
 
+#define SIZE 6
+
 typedef struct		s_ant
 {
 	int 			index;
@@ -261,17 +263,17 @@ void	execute(int **matrix, int end, int start)
 	int		*ver;
 	int 	weight;
 
-	d = (int*)malloc(sizeof(int) * 5);
-	v = (int*)malloc(sizeof(int) * 5);
+	d = (int*)malloc(sizeof(int) * SIZE);
+	v = (int*)malloc(sizeof(int) * SIZE);
 	i = 0;
-	while (i < 5)
+	while (i < SIZE)
 	{
 		d[i] = 1000;
 		v[i] = 1;
 		i++;
 	}
 	i = 0;
-	points = (int*)malloc(sizeof(int) * 5);
+	points = (int*)malloc(sizeof(int) * SIZE);
 	min = 0;
 	minindex = 0;
 	d[0] = 0;
@@ -281,7 +283,7 @@ void	execute(int **matrix, int end, int start)
 		min = 1000;
 		minindex = 1000;
 		i = 0;
-		while (i < 5)
+		while (i < SIZE)
 		{
 			if (v[i] == 1 && d[i] < min)
 			{
@@ -293,7 +295,7 @@ void	execute(int **matrix, int end, int start)
 		if (minindex != 1000)
 		{
 			j = 0;
-			while (j < 5)
+			while (j < SIZE)
 			{
 				if (matrix[minindex][j] > 0)
 				{
@@ -307,10 +309,10 @@ void	execute(int **matrix, int end, int start)
 		}
 	} while (minindex < 1000);
 	printf("Minimal ranges to points : ");
-	print_ints(5, d);
+	print_ints(SIZE, d);
 	// Кратчайший путь
 
-	ver = (int*)malloc(sizeof(int) * 5);
+	ver = (int*)malloc(sizeof(int) * SIZE);
 	ver[0] = end;
 	i = 1;
 	weight = d[end];
@@ -318,7 +320,7 @@ void	execute(int **matrix, int end, int start)
 	while (end != start)
 	{
 		i = 0;
-		while (i < 5)
+		while (i < SIZE)
 		{
 			if (matrix[i][end] != 0)
 			{
@@ -327,7 +329,8 @@ void	execute(int **matrix, int end, int start)
 				{
 					weight = tmp;
 					end = i;
-					ver[k] = i + 1;
+					ver[k] = i;
+//					printf("%d\n", i);
 					k++;
 				}
 			}
@@ -345,11 +348,19 @@ void	execute(int **matrix, int end, int start)
 int		main(int argc, char *argv[])
 {
 	int 	**matrix;
-	char	str[49] = "0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 0 0 1 0 1 0 1 0 1 0";
-
-	matrix = init_matrix(5, 5, str);
-	print_matrix(5, 5, matrix);
-	execute(matrix, 4, 0);
+	char	str[127] = "1 1 0 0 1 0 1 0 1 0 1 0 0 1 0 1 0 0 0 0 1 0 1 1 1 1 0 1 0 0 0 0 0 1 0 0";
+//                      example 3
+//	                    "0 1 0 1 0 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 1 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 1 0"
+//                      example 2
+//                      "0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 0 0 1 0 1 0 1 0 1 0"
+//                      example wiki_1
+//                      "0 1 0 0 1 1 0 1 1 1 0 1 0 1 0 0 1 1 0 1 1 1 0 1 0"
+//                      example wiki_2
+//                      "1 1 0 0 1 0 1 0 1 0 1 0 0 1 0 1 0 0 0 0 1 0 1 1 1 1 0 1 0 0 0 0 0 1 0 0"
+    printf("length = %d\n", ft_strsplit_len(ft_strsplit(str, ' ')));
+	matrix = init_matrix(SIZE, SIZE, str);
+	print_matrix(SIZE, SIZE, matrix);
+	execute(matrix, 2, 0);
 //	int 		fd;
 //	char		*line;
 //	int 		i;
