@@ -1,0 +1,14 @@
+const restartButton = document.querySelector('#restart-button');
+const scalePlus = document.querySelector('#scale-mapp');
+const scaleMinus = document.querySelector('#scale-mapm');
+const speedPlus = document.querySelector('#speedp');
+const speedMinus = document.querySelector('#speedm');
+const container = document.querySelector('.lemin-container');
+const startButton = document.querySelector('#start-button');
+const pauseButton = document.querySelector('#pause-button');
+let roomSize = 40;
+let screenWidth = window.screen.width;
+let screenHeight = window.screen.height;
+container.style.width = screenWidth;
+container.style.height = screenHeight;
+const widthOfGhost = Math.floor(roomSize / 1.5);

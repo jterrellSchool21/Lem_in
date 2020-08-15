@@ -1,0 +1,16 @@
+6
+room1 1 5
+room2 16 7
+room3 16 3
+room4 6 4
+##start
+start 9 8
+##end
+end 9 2
+start-room1
+start-room4
+room1-end
+start-room2
+room2-room3
+room4-end
+room3-end

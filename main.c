@@ -1,115 +1,23 @@
-#include <stdio.h>
-#include <fcntl.h>
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jslave <jslave@student.21-school.ru>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/15 18:59:35 by jslave            #+#    #+#             */
+/*   Updated: 2020/07/15 18:59:35 by jslave           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-typedef struct		s_ant
-{
-	int 			index;
-	int 			curr_room;
-	struct s_ant	*next;
-}					t_ant;
-
-typedef struct		s_lem_in
-{
-	int 	*rooms;
-	t_ant	*ants;
-	char	**commands;
-	char 	**comments;
-	int 	cmd;
-	int 	cmt;
-	int 	count_of_ants;
-	int 	**matrix;
-}					t_lem_in;
-
-typedef struct		s_room
-{
-	int 			ant;
-	int				x;
-	int				y;
-	int 			name;
-	int 			*output;
-	int 			*input;
-	struct s_room	*next;
-}					t_room;
-
-void	RaiseError(int e)
-{
-	if (e == 0)
-	{
-		ft_putstr(">>Malloc error, sorry...\n");
-		exit(1);
-	}
-}
-
-int 	ft_is_int(char *str)
-{
-	int 	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (ft_isdigit(str[i]))
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int		ft_strsplit_len(char **line)
-{
-	int 	i;
-
-	i = 0;
-	while (line[i])
-		i++;
-	return (i);
-}
-
-int 	is_room_name(char *line)
-{
-	if (line && ft_strlen(line))
-	{
-		if (line[0] != 'L' && line[0] != '#')
-			return (1);
-	}
-	return (0);
-}
-
-int 	isroom(char **line)
-{
-	if (ft_strsplit_len(line) == 3 && is_room_name(line[0]) && ft_is_int(line[1]) && ft_is_int(line[2]))
-		return (1);
-	else
-		return (0);
-}
-
-int 	iscommand(char *line, int i)
-{
-	if ((ft_strlen(line) >= 2) && !ft_strncmp(line, "##", 2))
-		return (1);
-	return (0);
-}
-
-int 	iscomment(char *line, int i)
-{
-	if (ft_strlen(line) && !iscommand(line, i) && !ft_strncmp(line, "#", 1))
-	return (1);
-	return (0);
-}
-
-int 	isants(char *line, int i)
-{
-	if (ft_is_int(line))
-		return (1);
-	return (0);
-}
+#include "lemin.h"
 
 t_lem_in	*ft_init_lem_in(void)
 {
 	t_lem_in	*lemin;
 
 	if (!(lemin = (t_lem_in *)ft_memalloc(sizeof(t_lem_in))))
-		RaiseError(0);
+        raise_error(0);
 	lemin->ants = 0;
 	lemin->commands = (char**)malloc(sizeof(char*) * 10);
 	lemin->comments = (char**)malloc(sizeof(char*) * 10);
@@ -122,101 +30,157 @@ t_lem_in	*ft_init_lem_in(void)
 
 }
 
-void	add_comment(t_lem_in *lem_in, char *line, int i)
+int     count_rooms(t_parsed_room **rooms)
 {
-	int 	a;
+    int     i;
 
-	if (lem_in->cmt == 0)
-		lem_in->comments[0] = ft_strjoin(ft_strdup(line), ft_itoa(i));
-	else
-	{
-		a = 0;
-		while (a < lem_in->cmt)
-			a++;
-		lem_in->commands[a] = ft_strjoin(ft_strdup(line), ft_itoa(i));
-	}
+    i = 0;
+    while (rooms[i])
+    {
+        i++;
+    }
+    return (i);
 }
 
-void	add_command(t_lem_in *lem_in, char *line, int i)
+void    print_tab(int **tab, int size)
 {
-	int 	a;
+    int     i;
+    int     j;
 
-	if ((ft_strcmp(line, "##end") == 0) || (ft_strcmp(line, "##start") == 0))
-		if (lem_in->cmd == 0)
-			lem_in->commands[0] = ft_strjoin(ft_strdup(line), ft_itoa(i));
-		else
-		{
-			a = 0;
-			while (a < lem_in->cmd)
-				a++;
-			lem_in->commands[a] = ft_strjoin(ft_strdup(line), ft_itoa(i));
-		}
+    i = 0;
+    while (i < size)
+    {
+        j = 0;
+        while (j < size)
+        {
+            printf("%d ", tab[i][j]);
+            j++;
+        }
+        printf("\n");
+        i++;
+    }
 }
 
-void	add_ant(t_lem_in *lem_in, char *line, int i)
-{
-	int 	i;
-	t_ant	*ants;
+//int     **make_tab(t_parsed_room **rooms)
+//{
+//    int     i;
+//    int     j;
+//
+//    while (rooms[i])
+//    {
+//        j = 0;
+//        if(rooms[i]->conn)
+//        {
+//            while((rooms[i]->conn)[j])
+//            {
+//                printf("%s ", (rooms[i]->conn)[j]);
+//                res[i][j] = ft_atoi((rooms[i]->conn)[j]);
+//                j++;
+//            }
+//
+//        }
+//        else
+//            res[i][j] = 0;
+//        printf("\n--------\n");
+//        i++;
+//    }
+////    print_tab(res, count_rooms(rooms));
+//    return (res);
+//}
 
-	lem_in->count_of_ants = ft_atoi(line);
-	i = 0;
-	ants = (t_ant*)malloc(sizeof(t_ant));
-	lem_in->ants = ants;
-	while (i < lem_in->count_of_ants)
-	{
-		ants->next = (t_ant*)malloc(sizeof(t_ant));
-		ants->curr_room = 0;
-		ants->index = i;
-		ants = ants->next;
-		i++;
-	}
-	ants->next = NULL;
+int     nulls(int *D, int count)
+{
+    int     i;
+
+    i = 0;
+    while (i < count)
+    {
+        if (D[i] != 0)
+            return (0);
+        i++;
+    }
+    return (1);
 }
 
-void	add_stroke(t_lem_in *lem_in)
+void    add_to_queue(int *queue, int N)
 {
-	lem_in->matrix = (int**)malloc(sizeof(int*) * 10);
-}
-
-void	add_room(t_lem_in *lem_in, char **line, int i)
-{
-	if (!(lem_in->matrix))
-		add_stroke(lem_in);
 
 }
 
-int main(int argc, char *argv[])
+void    pop_queue()
 {
-	int 		fd;
+
+}
+
+int     min_path(t_lem_in *lemin)
+{
+    int     i;
+    int     j;
+    int     *D; // не посещенные вершины
+    int     *V; // посещенные вершины
+    int     *queue;
+    int     *
+
+    D = (int*)malloc(sizeof(int) * lemin->count_rooms);
+    V = (int*)malloc(sizeof(int) * lemin->count_rooms);
+    i = 0;
+    while (i < lemin->count_rooms)
+    {
+        if (i != lemin->start)
+            D[i] = i;
+        else
+            D[i] = 0;
+        i++;
+    }
+    i = lemin->start;
+    while (!nulls(D, lemin->count_rooms))
+    {
+        j = 0;
+        while (j < lemin->count_rooms)
+        {
+            if (lemin->matrix[i][j])
+            {
+                add_to_queue(queue, j);
+            }
+            j++;
+        }
+        pop_queue();
+    }
+}
+
+int     solution(t_lem_in *lemin, t_parsed_room **rooms)
+{
+//    return (0);
+    return (min_path(lemin));
+//    Suurballe()
+}
+
+int main(int argc, char **argv)
+
+{
 	char		*line;
-	int 		i;
-	int 		count;
 	t_lem_in	*lem_in;
+    char *line_result;
+    int lines;
+    t_parsed_room  **rooms_array;
 
-	fd = open("kek.txt", O_RDONLY);
-	printf("%s\n", argv[1]);
-	i = 0;
-	lem_in = ft_init_lem_in();
-//	printf("%s\n", ft_strsplit("lelkek", ' ')[0]);
-	while ((get_next_line(fd, &line)) == 1)
+    lines = 0;
+    line_result = ft_strnew(1);
+	while ((get_next_line(0, &line)) > 0)
 	{
-		if (iscomment(line, i))
-		{
-			add_comment(lem_in, line, i);
-		}
-		if (iscommand(line, i))
-		{
-			add_command(lem_in, line, i);
-		}
-		if (isants(line, i))
-		{
-			add_ant(lem_in, line, i);
-		}
-		if (isroom(ft_strsplit(line, ' ')))
-		{
-			add_room(lem_in, ft_strsplit(line, " "), i);
-		}
-		i++;
+	    line = ft_strjoinfree_both(line,ft_strdup( "\n"));
+	    line_result = ft_strjoinfree_both(line_result, line);
+        lines++;
 	}
-	return 0;
+    char **array_for_validity_check = ft_strsplit(line_result,'\n');
+    ft_memdel((void **) &line_result);
+    rooms_array = check_validity_of_input_data(array_for_validity_check, lines);
+    lem_in = ft_init_lem_in();
+    lem_in->matrix = print_rooms_array(rooms_array, lem_in);
+    free_parsing_structs(rooms_array, NULL, NULL);//DELETE later but freee rooms by this func only
+    print_tab(lem_in->matrix, lem_in->count_rooms);
+    if(!solution(lem_in, rooms_array))
+        raise_error(3);
+
+    return 0;
 }

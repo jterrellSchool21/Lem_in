@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="super_funicular_lemin"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/jterrell/super-funicular-lemin/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/jterrell/super-funicular-lemin/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/jterrell/super-funicular-lemin/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="super_funicular_lemin">
+				<Option output="/Users/jterrell/super-funicular-lemin/cmake-build-debug/super_funicular_lemin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jterrell/super-funicular-lemin/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jterrell/super-funicular-lemin/inc"/>
+					<Add directory="/Users/jterrell/super-funicular-lemin/libft/includes"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 super_funicular_lemin"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="super_funicular_lemin/fast">
+				<Option output="/Users/jterrell/super-funicular-lemin/cmake-build-debug/super_funicular_lemin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jterrell/super-funicular-lemin/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jterrell/super-funicular-lemin/inc"/>
+					<Add directory="/Users/jterrell/super-funicular-lemin/libft/includes"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 super_funicular_lemin/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jterrell/super-funicular-lemin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/inc/lemin.h">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/lemin-visual/maps/shit.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/includes/ft_printf.h">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/includes/libft.h">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/char_str_perc.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/floats.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/floats_2.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/floats_3.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/floats_4.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/ft_printf.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/hex.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/int_utils_1.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/int_utils_2.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/int_utils_3.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/int_utils_4.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/ints.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/oct.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/parsing.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/pnt_uns_hex.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/precision.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/str.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/unsigned.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/unsigned_2.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/src_printf/utils.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/find_len_of_num.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_arraylen.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_atoi.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_atoi_base.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_atoi_long_long.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_bzero.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_count_if.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_foreach.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_free_2d_array.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_is_int.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_isalnum.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_isalpha.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_isascii.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_isdigit.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_isprint.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_itoa.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_itoa_base.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_itoa_base_unsigned.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_itoa_long_long.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_lstadd.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_lstappendelem.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_lstdel.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_lstdellast.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_lstdelone.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_lstiter.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_lstmap.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_lstnew.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_lstpushelem.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_memalloc.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_memccpy.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_memchr.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_memcmp.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_memcpy.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_memdel.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_memmove.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_memset.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_putchar.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_putchar_fd.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_putendl.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_putendl_fd.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_putnbr.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_putnbr_fd.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_putstr.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_putstr_fd.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strcat.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strchr.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strclr.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strcmp.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strcpy.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strdel.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strdup.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strequ.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_striter.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_striteri.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strjoin.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strjoinfree.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strlcat.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strlen.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strmap.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strmapi.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strncat.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strncmp.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strncpy.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strnequ.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strnew.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strnstr.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strrchr.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strreverse.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strsplit.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strstr.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strsub.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_strtrim.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_tolower.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/ft_toupper.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/libft/srcs/get_next_line.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/main.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/src/errors.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/src/parse_validity_connections.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/src/parse_validity_connections_2.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/src/parse_validity_indexes.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/src/parse_validity_main.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/src/parse_validity_utils.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
