@@ -40,27 +40,3 @@ unistd.h
 lemin.h
 /Users/jterrell/super-funicular-lemin/lemin.h
 
-/Users/jterrell/super-funicular-lemin/src/errors.c
-lemin.h
-/Users/jterrell/super-funicular-lemin/src/lemin.h
-
-/Users/jterrell/super-funicular-lemin/src/parse_validity_connections.c
-lemin.h
-/Users/jterrell/super-funicular-lemin/src/lemin.h
-
-/Users/jterrell/super-funicular-lemin/src/parse_validity_connections_2.c
-lemin.h
-/Users/jterrell/super-funicular-lemin/src/lemin.h
-
-/Users/jterrell/super-funicular-lemin/src/parse_validity_indexes.c
-lemin.h
-/Users/jterrell/super-funicular-lemin/src/lemin.h
-
-/Users/jterrell/super-funicular-lemin/src/parse_validity_main.c
-lemin.h
-/Users/jterrell/super-funicular-lemin/src/lemin.h
-
-/Users/jterrell/super-funicular-lemin/src/parse_validity_utils.c
-lemin.h
-/Users/jterrell/super-funicular-lemin/src/lemin.h
-
