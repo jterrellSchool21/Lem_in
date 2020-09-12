@@ -382,6 +382,9 @@
 		<Unit filename="/Users/jterrell/super-funicular-lemin/main.c">
 			<Option target="super_funicular_lemin"/>
 		</Unit>
+		<Unit filename="/Users/jterrell/super-funicular-lemin/push_utils.c">
+			<Option target="super_funicular_lemin"/>
+		</Unit>
 		<Unit filename="/Users/jterrell/super-funicular-lemin/src/errors.c">
 			<Option target="super_funicular_lemin"/>
 		</Unit>

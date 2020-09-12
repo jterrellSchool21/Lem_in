@@ -53,7 +53,7 @@ int     **print_rooms_array(t_parsed_room **rooms, t_lem_in *lemin) //delete lat
 		printf("   coordinates: x:%i, y:%i\n", rooms[i]->x, rooms[i]->y);
 		if (rooms[i]->type == 1)
 		{
-            lemin->start = i;
+            lemin->start = ft_atoi(rooms[i]->name);
             type = "start";
         }
 		if (rooms[i]->type == 2)
@@ -73,6 +73,10 @@ int     **print_rooms_array(t_parsed_room **rooms, t_lem_in *lemin) //delete lat
 
 			while((rooms[i]->conn)[j])
 			{
+			    char *test1 = (rooms[i]->conn)[j];
+			    int r = ft_atoi(rooms[i]->name);
+			    int c = ft_atoi((rooms[i]->conn)[j]);
+
                 res[ft_atoi(rooms[i]->name)][ft_atoi((rooms[i]->conn)[j])] = 1;
 				printf("*%s *", (rooms[i]->conn)[j]);
 				j++;

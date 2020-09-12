@@ -308,6 +308,10 @@ CMakeFiles/super_funicular_lemin.dir/main.c.o: ../inc/lemin.h
 CMakeFiles/super_funicular_lemin.dir/main.c.o: ../libft/includes/libft.h
 CMakeFiles/super_funicular_lemin.dir/main.c.o: ../main.c
 
+CMakeFiles/super_funicular_lemin.dir/push_utils.c.o: ../inc/lemin.h
+CMakeFiles/super_funicular_lemin.dir/push_utils.c.o: ../libft/includes/libft.h
+CMakeFiles/super_funicular_lemin.dir/push_utils.c.o: ../push_utils.c
+
 CMakeFiles/super_funicular_lemin.dir/src/errors.c.o: ../inc/lemin.h
 CMakeFiles/super_funicular_lemin.dir/src/errors.c.o: ../libft/includes/libft.h
 CMakeFiles/super_funicular_lemin.dir/src/errors.c.o: ../src/errors.c

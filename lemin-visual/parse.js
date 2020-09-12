@@ -113,7 +113,7 @@ function findMainIndexes(arr) {
 
 function parseInfo(text)
 {
-    let splitted_info = text.split('\r\n');//for Win
+    let splitted_info = text.split('\n');//for Win
    // let splitted_info = text.split('\n');
     if (splitted_info[0] === 'ERROR')
         throw new Error('File is not valid.\nError description: ' + splitted_info[1]);

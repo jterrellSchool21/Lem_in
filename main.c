@@ -88,70 +88,6 @@ void    print_tab(int **tab, int size)
 //    return (res);
 //}
 
-int     empty(int *D, int count)
-{
-    int     i;
-
-    i = 0;
-    while (i < count)
-    {
-        if (D[i] != -1)
-            return (0);
-        i++;
-    }
-    return (1);
-}
-
-void    add_to_queue(int *queue, int N, int size)
-{
-    int     i;
-    int     *que;
-
-    if (!queue)
-    {
-        queue = (int*)malloc(sizeof(int) * 1);
-        queue[0] = N;
-    }
-    else
-    {
-        que = (int*)malloc(sizeof(int) * (size + 1));
-        i = 0;
-        while (i < size)
-        {
-            que[i] = queue[i];
-            i++;
-        }
-        que[i + 1] = N;
-        *queue = *que;
-//        free(que);
-    }
-}
-
-int     pop_queue(int *queue, int size)
-{
-    int     tmp;
-    int     i;
-    int     *que;
-
-    if (queue)
-    {
-        i = 0;
-        que = (int*)malloc(sizeof(int) * size);
-        while (i < size)
-        {
-            if (i == 0)
-                tmp = queue[i];
-            else
-                que[i - 1] = queue[i];
-            i++;
-        }
-        *queue = *que;
-//        free(que);
-        return (tmp);
-    }
-    return (-1);
-}
-
 void    fill(int *tab, int size, int nbr)
 {
     int     i;
@@ -164,46 +100,120 @@ void    fill(int *tab, int size, int nbr)
     }
 }
 
-int     *min_path(t_lem_in *lemin)
+int     counts(int *D, int size)
 {
     int     i;
-    int     j;
-    int     *D; // не посещенные вершины
-    int     *V; // посещенные вершины
-    int     *queue;
-    int     k;
+    int     res;
 
-    D = (int*)malloc(sizeof(int) * lemin->count_rooms);
-    V = (int*)malloc(sizeof(int) * lemin->count_rooms);
-    queue = (int*)malloc(sizeof(int) * lemin->count_rooms);
-    fill(queue, lemin->count_rooms, -1);
     i = 0;
-    while (i < lemin->count_rooms)
+    res = 0;
+    while (i < size)
     {
-        if (i != lemin->start)
-            add_to_queue(D, i, i);
+        if (D[i] != -1)
+            res++;
         i++;
     }
-    i = lemin->start;
-    k = 0;
-    while (!empty(D, lemin->count_rooms))
+    return (res);
+}
+
+t_stk   *init_queue()
+{
+    t_stk   *first;
+
+    if (!(first = malloc(sizeof(t_stk))))
+        return (NULL);
+    first->next = NULL;
+    first->head = NULL;
+    return (first);
+}
+
+int     empty(t_stk *head)
+{
+    if (head->num == -1)
+        return (1);
+    else
+        return (0);
+}
+
+int     *min_path(t_lem_in *lemin)
+{
+    int     node;
+    int     j;
+    int     *D;
+    t_stk   *Stack;
+    t_stk   *temp;
+    int     i;
+
+    D = (int*)ft_memalloc(lemin->count_rooms);
+    j = 0;
+    while (j < lemin->count_rooms)
+        D[j++] = 0;
+    Stack = init_queue();
+    Stack->num = lemin->start;
+//    push(queue);
+    i = 0;
+    while (!empty(Stack))
     {
-        j = 0;
-        while (j < lemin->count_rooms)
+        if (i++ == 4)
+            break;
+        printf("Пустой ли стек - %d\n", empty(Stack));
+        printf("Расстояния до точек - ");
+        for (int k = 0; k < lemin->count_rooms; k++)
+            printf("%d ", D[k]);
+        printf("\n");
+        printf("Матрица смежности\n");
+        print_tab(lemin->matrix, lemin->count_rooms);
+        int test2 = Stack->num;
+        node = Stack->num;
+        remove_elem(Stack);
+        if (D[node] == 2)
+            continue;
+        D[node] = 2;
+        j = lemin->count_rooms;
+        while (j >= 0)
         {
-            if (lemin->matrix[i][j])
+            int test = lemin->matrix[node][j];
+            if (lemin->matrix[node][j] == 1 && D[j] != 2)
             {
-                add_to_queue(queue, j, lemin->count_rooms);
-                D[j] = -1;
+                temp = init_queue();
+                temp->num = j;
+                append_elem(Stack, temp);
+                //freeeeeeeeeeeeeeeeeeeeee
+                D[j] = 1;
             }
-            j++;
+            j--;
+            ft_printf("%d\n", node);
         }
-        for(int y = 0; y < lemin->count_rooms; y++)
-            printf("%d ", V[y]);
-        V[k] = pop_queue(queue, lemin->count_rooms);
-        k++;
     }
-    return (V);
+
+//    queue = init_queue();
+//    if (!(temp = malloc(sizeof(t_stk))))
+//        return (NULL);
+//
+//    V = (int*)malloc(sizeof(int) * lemin->count_rooms);
+//    fill(V, lemin->count_rooms, -1);
+//    i = 0;
+//    while (i < lemin->count_rooms)
+//    {
+//        add_to_queue(D, i, i);
+//        i++;
+//    }
+//    j = 0;
+//    while (counts(D, lemin->count_rooms) > 0)
+//    {
+//        i = 0;
+//        while (i < lemin->count_rooms)
+//        {
+//            if (lemin->matrix[j][i] != 0)
+//            {
+//                temp->num = i;
+//                append_elem(queue, temp);
+//            }
+//        }
+//        j++;
+//    }
+//    return (V);
+    return (D);
 }
 
 int     *solution(t_lem_in *lemin, t_parsed_room **rooms)
@@ -221,7 +231,7 @@ int main(int argc, char **argv)
     char *line_result;
     int lines;
     t_parsed_room  **rooms_array;
-    int         *res;
+//    int         *res;
 
     lines = 0;
     line_result = ft_strnew(1);
@@ -240,8 +250,8 @@ int main(int argc, char **argv)
     print_tab(lem_in->matrix, lem_in->count_rooms);
 //    if(!solution(lem_in, rooms_array))
 //        raise_error(3);
-    res = solution(lem_in, rooms_array);
-    for (int i = 0; i < lem_in->count_rooms; i++)
-        printf("%d ", res[i]);
+    solution(lem_in, rooms_array);
+//    for (int i = 0; i < lem_in->count_rooms; i++)
+//        printf("%d ", res[i]);
     return 0;
 }

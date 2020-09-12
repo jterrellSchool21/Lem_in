@@ -23,6 +23,13 @@
 # include <stdio.h>
 # include <sys/stat.h>
 
+typedef struct			s_stk
+{
+    int					num;
+    struct s_stk		*head;
+    struct s_stk		*next;
+}						t_stk;
+
 typedef struct		s_ant
 {
     int 			index;
@@ -128,5 +135,9 @@ void                create_connections_for_this_room(t_parsed_room *room, int j,
 
 int                 count_rooms(t_parsed_room **rooms);
 void                print_tab(int **tab, int size);
+t_stk				*append_elem(t_stk *stack_head, t_stk *elem);
+t_stk				*remove_elem(t_stk *elem);
+t_stk				*push(t_stk *head, t_stk *new_head);
+int					find_lst_size(t_stk *head);
 
 # endif

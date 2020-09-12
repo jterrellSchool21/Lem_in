@@ -112,4 +112,5 @@ add_executable(super_funicular_lemin
         src/parse_validity_indexes.c
         src/parse_validity_main.c
         src/parse_validity_utils.c
-        main.c)
+        main.c
+        push_utils.c)
