@@ -1,6 +1,7 @@
 var connect = require('connect');
 var serveStatic = require('serve-static');
 var fs = require('fs');
+var opn = require('opn');
 
 const getData = (fileName, type) =>
     new Promise((resolve, reject) =>
@@ -24,7 +25,7 @@ if(process.argv[2] != null && process.argv[2] != undefined)
                 .use(serveStatic(__dirname))
                 .listen(8000, () => {console.log("\x1b[32m%s\x1b[0m" ,'Visualiser running on http://localhost:8000')
                 });
-
+                opn('http://localhost:8000');
 
                 })
         .catch(error => console.log('Error: ', error));

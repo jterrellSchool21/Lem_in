@@ -14,5 +14,8 @@
     "connect": "^3.7.0",
     "nodemon": "^2.0.4",
     "serve-static": "^1.14.1"
+  },
+  "devDependencies": {
+    "opn": "^6.0.0"
   }
 }

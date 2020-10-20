@@ -1,3 +1,0 @@
-/Users/jterrell/super-funicular-lemin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/jterrell/super-funicular-lemin/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/jterrell/super-funicular-lemin/cmake-build-debug/CMakeFiles/super_funicular_lemin.dir

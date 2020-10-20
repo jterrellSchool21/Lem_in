@@ -1,0 +1,22 @@
+NAME
+	./lem-in - find the way of transferring ANTS through a network of tunnels with as few turns as possible
+
+SYNOPSIS
+	./lem-in [OPTION]... standard input
+
+DESCRIPTION
+	-h	display this help and exit
+	-v	on failure show error description; on success show number of turns
+	-t	show number of paths found
+	-p	show paths
+	-i	ignore repeated links
+	-x	do not show input
+	-xx	do not show input and result (additional information still can be shown)
+
+	standard input should be:
+	[number of ants]
+	[rooms: name x-coord y-coord; command ##start; command ##end; comment: #...]
+	[links: name-name; comment: #...]
+
+AUTHOR
+	Writen by domurdoc
